@@ -1,0 +1,12 @@
+<!-- <router-outlet></router-outlet> -->
+<div>
+  <form [formGroup]="profileForm">
+    <input type="text" id="user" formControlName="user">
+    <input type="text" id="pass" formControlName="pass">
+    <button type="button" (click)="onSubmit()">
+      <span *ngIf="loading">Carregando...</span>
+      <span *ngIf="!loading">Login</span>
+    </button>
+    <p *ngIf="error !== ''">{{error}}</p>
+  </form>
+</div>
